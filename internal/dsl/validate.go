@@ -7,10 +7,10 @@ import (
 )
 
 var (
-	ErrNameRequired   = errors.New("scenario name is required")
-	ErrStepsRequired  = errors.New("scenario must have at least one step")
-	ErrStepMethod     = errors.New("step method is required")
-	ErrStepURL        = errors.New("step url is required")
+	ErrNameRequired  = errors.New("scenario name is required")
+	ErrStepsRequired = errors.New("scenario must have at least one step")
+	ErrStepMethod    = errors.New("step method is required")
+	ErrStepURL       = errors.New("step url is required")
 )
 
 // Validate checks required fields and returns the first validation error.

@@ -5,19 +5,19 @@ package dsl
 type ScenarioType string
 
 const (
-	TypeSQLi          ScenarioType = "sqli"
-	TypeIDOR          ScenarioType = "idor"
-	TypeSSRF          ScenarioType = "ssrf"
-	TypeBruteForce    ScenarioType = "brute_force"
+	TypeSQLi            ScenarioType = "sqli"
+	TypeIDOR            ScenarioType = "idor"
+	TypeSSRF            ScenarioType = "ssrf"
+	TypeBruteForce      ScenarioType = "brute_force"
 	TypeSecurityHeaders ScenarioType = "security_headers"
-	TypeRateLimit     ScenarioType = "rate_limit"
+	TypeRateLimit       ScenarioType = "rate_limit"
 )
 
 // Scenario is the root DSL structure: a named security test with one or more steps.
 type Scenario struct {
-	Name        string        `yaml:"name"`
-	Description string        `yaml:"description"`
-	Type        ScenarioType  `yaml:"type"`
+	Name        string         `yaml:"name"`
+	Description string         `yaml:"description"`
+	Type        ScenarioType   `yaml:"type"`
 	Steps       []ScenarioStep `yaml:"steps"`
 }
 
